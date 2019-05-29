@@ -1,9 +1,8 @@
 import cv2
 import numpy as np
 
-# lower mask (0-10) for Red color
-lower_red = np.array([0,50,50])
-upper_red = np.array([10,255,255])
+lower_color = np.array([150,50,50])
+upper_color = np.array([180,255,255])
 
 cap = cv2.VideoCapture(0)
 
@@ -13,7 +12,7 @@ def get_XY():
 	# Convert BGR to HSV
 	hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
 	# Threshold the HSV image to get only skin colors
-	mask = cv2.inRange(hsv, lower_red, upper_red)
+	mask = cv2.inRange(hsv, lower_color, upper_color)
 
 	# apply a series of erosions and dilations to the mask
 	# using an elliptical kernel
