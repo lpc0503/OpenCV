@@ -197,7 +197,7 @@ def main():
 					# if event.type == pygame.MOUSEBUTTONDOWN:
 					# 	if(game_mode == 0):
 					# 		game_mode = 1
-				paddle_x = get_XY()[0] - 50
+				paddle_x = int(850*(get_XY()[0]/640)) - 50
 				#---------------------------------------------------------------------    
 				# 清除畫面.
 				canvas.fill(color_gray)
