@@ -4,7 +4,7 @@ import numpy as np
 lower_color = np.array([150,50,50])
 upper_color = np.array([180,255,255])
 
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(1)
 
 def get_XY():
 	ret, frame = cap.read()
